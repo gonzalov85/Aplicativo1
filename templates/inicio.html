@@ -10,7 +10,10 @@
     </style>
     <div class="container">
         <h2>¡Bienvenido a Carpincho Games!</h2>
-        <img src="{% static 'images/capy1.jpg' %}" alt="Tincho el Carpincho" width="300" height="300">
+        <div>
+            <h2>Aniversario de la Provincia del Chaco</h2>
+        </div>
+        <img src="{% static 'images/capy1.jpg' %}" alt="Tincho el Carpincho" width="300" height="300"><img src="{% static 'images/escudochaco.png' %}" alt="Tincho el Carpincho" width="250" height="300">
     {% if user.is_authenticated %}
         <h3>Jugar Ahora! <a href="{% url 'jugar' %}">Entrar y Jugar</a> </h3>
 
