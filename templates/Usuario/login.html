@@ -9,15 +9,15 @@
     *{
         text-align: center;
     }
-    .container{
+    .container-login{
         width: 30%;
     }
 </style>
-<div class="container">
+<div class="container container-login">
     <form method="POST">
         {% csrf_token %}
         <div class="form-group"  style= "text-align: left;">
-        <label for="exampleInputUser1">Usuario</label>
+        <label for="exampleInputUser1" class="form-group">Usuario</label>
         <input style= "text-align: left;" type="text" name = "username" class="form-control" id="exampleInputUser1" aria-describedby="emailHelp" placeholder="Enter email">
         <small id="emailHelp" class="form-text text-muted">No compartiermos tu contraseña con nadie.</small>
         </div>

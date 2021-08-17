@@ -1,8 +1,73 @@
 {% extends 'base.html' %}
 {% block contenido %}
-<form method="POST">
+<!-- <form method="POST">
     {% csrf_token %}
     {{form.as_p}}
     <button type="submit">Enviar</button>
-</form>
+</form> -->
+<style type="text/css">
+    *{
+        text-align: center;
+    }
+    .container-registro{
+        width: 30%;
+    }
+</style>
+<div class="container container-registro">
+    <h2>Crear una cuenta:</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <table class="table">
+            <tbody>
+                <tr>
+                    <th scope="col"><div class="form-group"  style= "text-align: left;">
+                        <label for="Nombre">Nombre:</label>
+                        </div></th>
+                    <th>{{form.first_name}}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th scope="col"><div class="form-group"  style= "text-align: left;">
+                        <label for="Nombre">Apellido:</label>
+                        </div></th>
+                    <th>{{form.last_name}}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th scope="col"><div class="form-group"  style= "text-align: left;">
+                        <label for="Nombre">Email:</label>
+                        </div></th>
+                    <th>{{form.email}}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th scope="col"><div class="form-group"  style= "text-align: left;">
+                        <label for="Nombre">Nombre de Usuario:</label>
+                        </div></th>
+                    <th>{{form.username}}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th scope="col"><div class="form-group"  style= "text-align: left;">
+                        <label for="Nombre">Contraseña:</label>
+                        </div></th>
+                    <th>{{form.password1}}</td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr>
+                    <th scope="col"><div class="form-group"  style= "text-align: left;">
+                        <label for="Nombre">Repetir Contraseña</label>
+                        </div></th>
+                    <th>{{form.password2}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button type="submit" class="btn btn-primary">Registrar</button>
+    </form>
+</div>
 {% endblock %}
