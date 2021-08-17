@@ -27,7 +27,7 @@ class ElegirRespuesta(models.Model):
 
 class QuizUsuario(models.Model):
     usuario = models.OneToOneField(User, on_delete=models.CASCADE)
-    puntaje_total = models.DecimalField(verbose_name='puntaje total', default = 0, decimal_places= 2, max_digits=10)
+    puntaje_total = models.DecimalField(verbose_name='puntaje total', default = 0, decimal_places= 2, max_digits=10, null=True)
 
     def crear_intentos(self,pregunta):
         intento = PreguntasRespondidas(pregunta=pregunta, quizUser=self)
