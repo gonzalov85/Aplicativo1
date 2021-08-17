@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<!-- <form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Enviar</button>
+</form> -->
+<style type="text/css">
+    *{
+        text-align: center;
+    }
+    .container{
+        width: 30%;
+    }
+</style>
+<div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        <div class="form-group"  style= "text-align: left;">
+        <label for="exampleInputUser1">Usuario</label>
+        <input style= "text-align: left;" type="text" name = "username" class="form-control" id="exampleInputUser1" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">No compartiermos tu contraseña con nadie.</small>
+        </div>
+        <div class="form-group"  style= "text-align: left;">
+        <label style= "text-align: left;" for="exampleInputPassword1">Password</label>
+        <input style= "text-align: left;" type="password" name = "password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div><br>
+        <button type="submit" class="btn btn-primary">Entrar</button>
+    </form>
+</div>
+{% endblock %}
