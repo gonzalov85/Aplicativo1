@@ -1,6 +1,4 @@
-*{
-    text-align: center;
-}
+
 .container-login{
     width: 30%;
 }
@@ -16,4 +14,8 @@ h2{
 .logo-g12{
     height:8vh;
     width: 8vh;
+}
+
+.inicio{
+    text-align: center;
 }
