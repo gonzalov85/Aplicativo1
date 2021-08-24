@@ -6,10 +6,15 @@ import random
 
 
 # Create your models here.
+class Categoria(models.Model):
+    nombre = models.TextField(verbose_name='Categoria')
+    def __str__(self):
+        return self.nombre
 class Pregunta(models.Model):
     NUMERO_DE_RESPUESAS_PERMITIDAS = 1
     texto = models.TextField(verbose_name='Texto de la pregunta')
     max_puntaje = models.DecimalField(verbose_name='Maximo Puntaje', default=3, decimal_places=2, max_digits=6)
+    categoria = models.ForeignKey(Categoria, on_delete=models.SET_NULL, null=True)
     def __str__(self):
         return self.texto
 
@@ -20,7 +25,7 @@ class ElegirRespuesta(models.Model):
 
     pregunta = models.ForeignKey(Pregunta, related_name='opciones', on_delete=models.CASCADE)
     correcta = models.BooleanField(verbose_name='¿Es esta la respuesta correcta?', default=False, null=False)
-    texto = models.TextField(verbose_name='Texto de la respuesta')
+    texto = models.TextField(verbose_name='Texto de la respuesta', null=True, blank=True)
 
     def __str__(self):
         return self.texto
