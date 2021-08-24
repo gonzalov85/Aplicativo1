@@ -1,5 +1,4 @@
 {% extends 'base.html' %}
-
 {% block contenido %}
     <div class="container">
         <h1 class="text-center my-4">
@@ -26,5 +25,17 @@
             </tbody>
         </table>
     </div>
+    <div class="puntaje_actual">
+        <p> {{user.username.upper}}  </p>
+        {% for user_quiz in usuario_quiz %}
+            {% if user.username == user_quiz.usuario.username %}     
 
-{% endblock %}
+                <p>Tu puntaje fue de: {{user_quiz.puntaje_total}}</p> 
+            
+             {% endif %}
+        {% endfor %}
+       
+        
+    </div>
+
+    {% endblock %}

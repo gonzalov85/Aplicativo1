@@ -21,12 +21,12 @@ def HomeUsuario(request):
 
 @login_required(login_url='inicio.html')
 def tablero(request):
-    total_usuarios_quiz = QuizUsuario.objects.order_by('-puntaje_total')[:10]
+    total_usuarios_quiz = QuizUsuario.objects.order_by('-puntaje_total')[:20]
     contador = total_usuarios_quiz.count()
 
     context = {
         'usuario_quiz': total_usuarios_quiz,
-        'contar_user':contador
+        'contar_user':contador,
     }
     return render(request,'play/tablero.html',context)
 

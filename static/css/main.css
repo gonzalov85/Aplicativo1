@@ -19,3 +19,9 @@ h2{
 .inicio{
     text-align: center;
 }
+
+.puntaje_actual{
+    color: red;
+    font-size: 120%;
+    margin-left: 20px;
+    font-weight: bold;
