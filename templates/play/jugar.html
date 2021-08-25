@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block contenido %}
 {% if pregunta is None %}
 
@@ -14,6 +14,35 @@
     <div class="container">
         <div class= "jumbotron my-4">
             <h2>Categoría: {{pregunta.categoria}}</h3>
+                    {% if  pregunta.categoria.nombre == "CULTURA Y ARTE" %}     
+    
+                        <img src="{% static 'images/culturayarte.png' %}" alt="" width="150" height="150"></p> 
+                
+                    {% elif  pregunta.categoria.nombre == "HISTORIA" %}     
+    
+                        <img src="{% static 'images/historia.png' %}" alt="" width="150" height="150"></p> 
+                    
+                    {% elif  pregunta.categoria.nombre == "DEPORTE" %}     
+    
+                        <img src="{% static 'images/deporte.png' %}" alt="" width="150" height="150"></p> 
+                    
+                    {% elif  pregunta.categoria.nombre == "GEOGRAFÍA" %}     
+    
+                        <img src="{% static 'images/geografia.png' %}" alt="" width="150" height="150"></p> 
+                    
+                    {% elif  pregunta.categoria.nombre == "ECONOMÍA" %}     
+    
+                        <img src="{% static 'images/economia.png' %}" alt="" width="150" height="150"></p> 
+                    
+                    {% elif  pregunta.categoria.nombre == "CIENCIA Y EDUCACIÓN" %}     
+    
+                        <img src="{% static 'images/cienciayedu.png' %}" alt="" width="150" height="150"></p> 
+                    
+                    {% elif  pregunta.categoria.nombre == "ENTRETENIMIENTO" %}     
+    
+                        <img src="{% static 'images/entretenimiento.png' %}" alt="" width="150" height="150"></p> 
+                
+                    {% endif %}
             <h3>Pregunta: {{pregunta.texto}}</h3>
             <form method = "POST" class = "form">
                 {% csrf_token %}
