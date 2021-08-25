@@ -26,7 +26,7 @@
         </table>
     </div>
     <div class="puntaje_actual">
-        <p> {{user.username.upper}}  </p>
+        <p> USUARIO: {{user.username.upper}}  </p>
         {% for user_quiz in usuario_quiz %}
             {% if user.username == user_quiz.usuario.username %}     
 
@@ -34,8 +34,9 @@
             
              {% endif %}
         {% endfor %}
-       
-        
     </div>
-
+    <div class="jugar-denuevo">
+        <h2 class="comienza">¡Comienza de nuevo e intenta obtener un puntaje más alto!</h2>
+        <a href="{% url 'borrar_respondidas' %}"><button type="button" class="btn btn-primary">Volver a Jugar </button></a>
+    </div>
     {% endblock %}

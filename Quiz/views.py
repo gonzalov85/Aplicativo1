@@ -105,3 +105,7 @@ def registro(request):
 def logout_vista(request):
     logout(request)
     return redirect('inicio')
+    
+def borrar_respondidas(self):
+    PreguntasRespondidas.objects.all().delete()
+    return redirect('jugar')
