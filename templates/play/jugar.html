@@ -4,9 +4,9 @@
 {% if pregunta is None %}
 
     <div class="container">
-        <div class= "jumbotron my-4">
-            <h1>Ya has respondido a todas nuestras preguntas. Mira el tablero de posiciones</h1>
-            <a href="{% url 'tablero' %}">Ver Aqui</a>
+        <div class= "jumbotron my-4 jugaste">
+            <h1>Ya has respondido a todas nuestras preguntas. Mira el tablero de posiciones</h1><br>
+            <h2>--><a href="{% url 'tablero' %}">Ver Aqui</a><--</h2>
         </div>
     </div>
 
@@ -51,16 +51,16 @@
                     <div class="form-check mx-4">
                         <input class = "form-check-input" type = "radio" name="respuesta_pk" value = "{{opciones.pk}}" id ="choice-{forloop.counter}}">
                         <label class = "form-check-label" for = "choice-{forloop.counter}}">
-                            {{opciones.texto}}
-                        </label>
+                            {{opciones.texto}}</label>
                     </div>
                 {% endfor %}
-
+                    <br>
                     <button type="submit" class ="btn btn-success">
                         Enviar
                     </button>
 
             </form>
+            <br>
         </div>
     </div>
 {% endif %}

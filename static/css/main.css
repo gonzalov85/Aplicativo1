@@ -7,7 +7,7 @@
 }
 
 
-h2{
+.titulo-carpincho {
     color:blue;
 }
 
@@ -20,12 +20,13 @@ h2{
 .inicio{
     text-align: center;
 }
-
-.puntaje_actual{
-    color: red;
-    font-size: 120%;
-    margin-left: 20px;
+.puntaje{
+    margin-left:2vh;
     font-weight: bold;
+}
+.puntaje_actual{
+    color: rgb(199, 3, 3);
+    font-size: 120%;
 }
 
 .jugar-denuevo{
@@ -89,3 +90,14 @@ h2{
     background-color:white;
 }
 
+.alerta {
+    color:rgb(192, 1, 1);
+}
+
+.caja-atencion{
+    text-align: center;
+}
+
+.jugaste{
+    text-align: center;
+}

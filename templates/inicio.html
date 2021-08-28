@@ -11,7 +11,7 @@
         </div>
         <img src="{% static 'images/capy1.jpg' %}" alt="Tincho el Carpincho" width="300" height="300"><img src="{% static 'images/escudochaco.png' %}" alt="Tincho el Carpincho" width="250" height="300"><br><br>
     {% if user.is_authenticated %}
-        <h3>¡Jugar Ahora! --> <a href="{% url 'jugar' %}"></a><img class="option" src="{% static 'images/play.png' %}" alt="Play Button"></a></h3>
+        <h3>¡Jugar Ahora! --> <a href="{% url 'jugar' %}"><img class="option" src="{% static 'images/play.png' %}" alt="Play Button"></a></h3>
         <br><br>
         <h3>Ver Tablero TOP 20 --> <a  href="{% url 'tablero' %}"><img class="option" src="{% static 'images/top20.png' %}" alt="Top 20"></a> </h3>
         <br><br>

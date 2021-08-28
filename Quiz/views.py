@@ -109,3 +109,8 @@ def logout_vista(request):
 def borrar_respondidas(self):
     PreguntasRespondidas.objects.all().delete()
     return redirect('jugar')
+
+
+@login_required(login_url='inicio.html')
+def Atencion(request):
+    return render(request,'play/atencion.html')

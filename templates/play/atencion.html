@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block contenido %}
+<div class="caja-atencion">
+<br><br>
+<h2 class="alerta">¡Atención: Al jugar de nuevo se borrará tu puntaje actual para obtener uno nuevo!</h2>
+<h3 class="pregunta">¿Deseas continuar de todos modos?</h3><br><br>
+<a href="{% url 'borrar_respondidas' %}"><button type="button" class="btn btn-primary">CONTINUAR</button></a><br><br>
+<a href="{% url 'tablero' %}"><button type="button" class="btn btn-secondary">REGRESAR</button></a>
+</div>
+
+{% endblock %}
