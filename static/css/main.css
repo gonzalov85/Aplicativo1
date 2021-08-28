@@ -1,11 +1,6 @@
-
-.container-login{
-    width: 30%;
+body{
+    height:80vh;
 }
- .container-registro{
-    width: 30%;
-}
-
 
 .titulo-carpincho {
     color:blue;
@@ -19,6 +14,7 @@
 
 .inicio{
     text-align: center;
+    padding-top: 2vh;
 }
 .puntaje{
     margin-left:2vh;
@@ -80,8 +76,8 @@
 }
 
 .footer{
-    text-align: center;
     position:fixed;
+    text-align: center;
     border-top: solid lightgray 2px;
     padding:2vh;
     bottom:0;
@@ -99,5 +95,25 @@
 }
 
 .jugaste{
+    text-align: center;
+}
+
+.small{
+    color:rgb(253, 82, 82);
+    font-size:2vh;
+}
+
+.container-registro{
+    width: 30%;
+    height: 80vh;
+    padding-top: 2vh;
+}
+
+.container-login{
+    width: 30%;
+    height: 80vh;
+}
+
+.login-btn{
     text-align: center;
 }

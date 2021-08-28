@@ -5,14 +5,6 @@
     {{form.as_p}}
     <button type="submit">Enviar</button>
 </form> -->
-<style type="text/css">
-    *{
-        text-align: center;
-    }
-    .container-registro{
-        width: 30%;
-    }
-</style>
 <div class="container container-registro">
     <h2>Crear una cuenta:</h2>
     <form method="POST">
@@ -55,7 +47,8 @@
                     <th scope="col"><div class="form-group"  style= "text-align: left;">
                         <label for="Nombre">Contraseña:</label>
                         </div></th>
-                    <th>{{form.password1}}</td>
+                    <th>{{form.password1}}</td><br>
+                    <small class="small">La contraseña debe contener al menos 8 caracteres entre letras y números.</small>
                 </tr>
             </tbody>
             <tbody>
@@ -68,7 +61,9 @@
             </tbody>
         </table>
         {{ form.errors }}
-        <button type="submit" class="btn btn-primary">Registrar</button>
+        <div class="login-btn"><button  type="submit" class="btn btn-primary">Registrar</button></div>
     </form>
+    <br><br><br><br><br><br>
 </div>
+
 {% endblock %}
