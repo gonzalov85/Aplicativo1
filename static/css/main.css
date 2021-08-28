@@ -13,7 +13,7 @@ h2{
 
 .logo-g12{
     height:8vh;
-    width: 8vh;
+    width: 9vh;
     margin-left: 2vh;
 }
 
@@ -40,3 +40,52 @@ h2{
 .volver {
     color: blue;
 }
+
+.subtitle{
+    color: rgb(128, 1, 1);
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+    padding: 2vh;
+}
+.option{
+    width: 15vh;
+    filter: grayscale(80%);
+}
+.option:hover{
+    border: solid blue 2px;
+    border-radius: 20px;
+    filter: grayscale(0%);
+}
+
+.option2{
+    padding:2vh;
+    width: 15vh;
+    filter: grayscale(80%);
+}
+.option2:hover{
+    border: solid blue 2px;
+    border-radius: 20px;
+    filter: grayscale(0%);
+}
+
+.subdos {
+    color: black;
+    font-style: italic;
+}
+
+
+.nav-link:hover{
+    font-weight: bold;
+}
+
+.footer{
+    text-align: center;
+    position:fixed;
+    border-top: solid lightgray 2px;
+    padding:2vh;
+    bottom:0;
+    left: 0;
+    right: 0;
+    background-color:white;
+}
+

@@ -4,19 +4,22 @@
     <div class="container inicio">
         <h2 class="titulo-carpincho">¡Bienvenido a Carpincho Games!</h2>
         <div>
-            <h2>Aniversario de la Provincia del Chaco</h2>
+            <h3 class="subdos">Aniversario de la Provincia del Chaco</h3>
         </div>
-        <img src="{% static 'images/capy1.jpg' %}" alt="Tincho el Carpincho" width="300" height="300"><img src="{% static 'images/escudochaco.png' %}" alt="Tincho el Carpincho" width="250" height="300">
+        <div>
+            <h4 class="subtitle">¡Pon a prubea tu conocimiento acerca de la provincia con este cuestionario!</h4>
+        </div>
+        <img src="{% static 'images/capy1.jpg' %}" alt="Tincho el Carpincho" width="300" height="300"><img src="{% static 'images/escudochaco.png' %}" alt="Tincho el Carpincho" width="250" height="300"><br><br>
     {% if user.is_authenticated %}
-        <h3>Jugar Ahora! <a href="{% url 'jugar' %}">Entrar y Jugar</a> </h3>
+        <h3>¡Jugar Ahora! --> <a href="{% url 'jugar' %}"></a><img class="option" src="{% static 'images/play.png' %}" alt="Play Button"></a></h3>
         <br><br>
-        <h3>Ver Tablero TOP 20 ---> <a href="{% url 'tablero' %}"> Resultados TOP 20</a> </h3>
+        <h3>Ver Tablero TOP 20 --> <a  href="{% url 'tablero' %}"><img class="option" src="{% static 'images/top20.png' %}" alt="Top 20"></a> </h3>
         <br><br>
     {% else %}
 
-        <h3>¿Aún no tienes cuenta? ---> <a href="{% url 'registro' %}">Registrarse</a> </h3>
+        <h3>¿Aún no tienes cuenta? ---> <a class="option2" href="{% url 'registro' %}">Registrarse</a> </h3>
         <br><br>
-        <h3>Si ya tienes una cuenta ---> <a href="{% url 'login' %}">Entrar y Jugar</a> </h3>
+        <h3>Si ya tienes una cuenta ---> <a  class="option2" href="{% url 'login' %}">Entrar y Jugar</a> </h3>
     {% endif %}
-    </div>
+    </div><br><br><br><br><br><br>
 {% endblock %}
