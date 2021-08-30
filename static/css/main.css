@@ -152,3 +152,27 @@ body{
 .imagen-puntaje img{
     width: 20vh;
 }
+
+.share img{
+    width: 5vh;
+}
+
+.share {
+    color: blue;
+    text-align: center;
+    padding: 5vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cuadrito{
+    width: 20%;
+    border: solid black 2px;
+    padding: 2vh;
+    background-color: rgb(194, 246, 255)
+}
+
+.facebooklogo{
+    margin-left: 2vh;
+}
