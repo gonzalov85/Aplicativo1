@@ -129,3 +129,14 @@ body{
     height:8vh;
     margin-left: 5vh;
 }
+
+#tiempo {
+    color: red;
+    font-size: 4vh;
+    font-weight: bold;
+}
+
+.tiempotexto{
+    font-size: 4vh;
+    font-weight: bold;
+}
