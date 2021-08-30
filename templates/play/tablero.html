@@ -17,7 +17,7 @@
             <tbody>
                 {% for user_quiz in usuario_quiz %}
                 <tr>
-                    <th>{{forloop.counter}}</th>
+                    <th>{{forloop.counter}}º</th>
                     <th>{{user_quiz.usuario.username}}</th>
                     {% if user_quiz.puntaje_total == None %}
 
