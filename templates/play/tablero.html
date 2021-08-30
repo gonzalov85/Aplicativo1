@@ -39,11 +39,11 @@
             {% if user.username == user_quiz.usuario.username %}     
                 {% if user_quiz.puntaje_total == None %}
 
-                    <p>Tu puntaje fue de:  <span class="puntaje_actual">0</span> puntos.</p> 
+                    <p>Tu puntaje es de:  <span class="puntaje_actual">0</span> puntos.</p> 
 
                 {% else %}
 
-                    <p>Tu puntaje fue de: <span class="puntaje_actual">{{user_quiz.puntaje_total}}</span> puntos.</p> 
+                    <p>Tu puntaje es de: <span class="puntaje_actual">{{user_quiz.puntaje_total}}</span> puntos.</p> 
             
                 {% endif %}
             {% endif %}

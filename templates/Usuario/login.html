@@ -20,7 +20,11 @@
         </div><br>
         {{ form.non_field_errors }}
         <div class="login-btn"><button type="submit" class="btn btn-primary">Entrar</button></div>
-    </form>
+    </form><br><br>
+    <div class="container aunno">
+        <h4>¿Aun no tienes cuenta?</h4>
+        <a href="{% url 'inicio' %}"><button class="btn btn-secondary">Crear una cuenta nueva</button></a>
+    </div>
 </div><br><br><br><br>
 
 {% endblock %}

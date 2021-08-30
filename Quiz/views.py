@@ -15,11 +15,11 @@ def inicio(request):
 
     return render(request,'inicio.html', context)
 
-@login_required(login_url='inicio.html')
+@login_required(login_url='login')
 def HomeUsuario(request):
     return render(request,'Usuario/home.html')
 
-@login_required(login_url='inicio.html')
+@login_required(login_url='login')
 def tablero(request):
     total_usuarios_quiz = QuizUsuario.objects.order_by('-puntaje_total')[:20]
     contador = total_usuarios_quiz.count()
@@ -30,7 +30,7 @@ def tablero(request):
     }
     return render(request,'play/tablero.html',context)
 
-@login_required(login_url='inicio.html')
+@login_required(login_url='login')
 def jugar(request):
     QuizUser, created= QuizUsuario.objects.get_or_create(usuario=request.user)
     
@@ -56,6 +56,7 @@ def jugar(request):
         }
     return render(request,'play/jugar.html',context)
 
+@login_required(login_url='login')
 def resultado_pregunta(request, pregunta_respondida_pk):
     respondida = get_object_or_404(PreguntasRespondidas, pk=pregunta_respondida_pk)
 
@@ -111,6 +112,6 @@ def borrar_respondidas(self):
     return redirect('jugar')
 
 
-@login_required(login_url='inicio.html')
+@login_required(login_url='login')
 def Atencion(request):
     return render(request,'play/atencion.html')
