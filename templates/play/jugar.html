@@ -60,9 +60,9 @@
                     </button><span class="tiempotexto">   Tiempo restante para esta pregunta: </span><span id="tiempo"></span><span class="tiempotexto"> segundos.</span>
 
             </form>
-            <br><br><br><br>
+            <br>
         </div>
-    </div>
+    </div><br><br><br>
     <script>
         var timer = 30;
         setTimeout(excuteMethod, 1000);
@@ -73,9 +73,6 @@
             if (timer >= 0) setTimeout(excuteMethod, 1000);
             if (timer == 0) location.reload();
         }   
-        
-       
-   
     </script>
 {% endif %}
 {% endblock %}

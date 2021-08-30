@@ -144,3 +144,11 @@ body{
 .aunno{
     text-align: center;
 }
+.imagen-puntaje{
+    text-align: center;
+    color: rgb(173, 41, 41);
+}
+
+.imagen-puntaje img{
+    width: 20vh;
+}
